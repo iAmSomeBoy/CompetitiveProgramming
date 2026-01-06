@@ -1,1 +1,4 @@
-# round() :   there is a round() which can convert any float number to its nearest int number
+round(value) :   there is a round() which can convert any float number to its nearest int number
+to_string(value) : to convert integer/float into string
+setw(4), setfill('0') :to print fixd amount/ size of value.
+    cout<<setw(4)<<setfill('0')<<s<<endl;
