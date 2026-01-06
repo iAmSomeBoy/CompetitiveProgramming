@@ -1,0 +1,3 @@
+$ always try to avoid nested loop. try to build it with single loop
+$ always try to reduce the limit/ range of the loop with the help of number theory or other mathematical concepts
+$ be awer of the time restrictions. 10^8 operations = 1 second. every run of the loop is one operation
