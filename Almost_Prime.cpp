@@ -1,29 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> primes;
+int main() {
+    int n;
+    cin >> n;
 
-void sieve(int n){
-    vector<bool> isPrime(n+1, true);
-    for(int i= 2; i<= n; i++){
-        if(isPrime[i]){
-            primes.push_back(i);
-            for(int j= i*2; j<= n; j= j+ i){
-                isPrime[j]= false;
+    vector<int> cnt(n + 1, 0);
+
+    for (int i = 2; i <= n; i++) {
+        if (cnt[i] == 0) {          // i is prime
+            for (int j = i; j <= n; j += i) {
+                cnt[j]++;
             }
         }
     }
-}
 
-
-int main(){
-    int n;
-    cin>>n;
-    sieve(n);
-    for(int i: primes){
-        cout<<i<<" ";
+    int ans = 0;
+    for (int i = 2; i <= n; i++) {
+        if (cnt[i] == 2)
+            ans++;
     }
-    
 
+    cout << ans << endl;
     return 0;
 }
