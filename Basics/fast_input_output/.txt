@@ -1,0 +1,4 @@
+Write the code in C or
+put the following two lines in the main function
+ios::sync_with_stdio(false);
+cin.tie(NULL);
